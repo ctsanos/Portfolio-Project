@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col border-bottom">
+                <h1 class="text-center">VEHICLE CHECK-IN/OUT</h1>
+            </div>
+        </div>
+                <form action="" id="checkInOut">
+                    <div  class="row border-bottom my-5">
+                        <div class="form-group col-sm-3">
+                            <label for="jobnum">Job #</label>
+                            <input type="text" name="jobnum" id="jobnum" readonly class="form-control-plaintext" placeholder="filled by db" value="filled by db">
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="">Agency:</label>
+                            <input type="text" name="agency" id="agency" readonly class="form-control-plaintext" placeholder="filled by db" value="filled by db">
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="makemod">Make/Model</label>
+                            <input type="text" name="makemod" id="makemod" readonly class="form-control-plaintext"  placeholder="filled by db" value="filled by db">
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="tech">Tech</label>
+                            <input type="text" name="tech" id="tech" creadonly class="form-control-plaintext"  placeholder="filled by db" value="filled by db">
+                        </div>
+                    </div>
+
+                    <div  class="row">
+                        <div class="form-group col-sm-4">
+                            <label for="vin">VIN</label>
+                            <input type="text" name="vin" id="vin" creadonly class="form-control" placeholder="filled by db">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="datetime">Date/Time</label>
+                            <input type="datetime-local" name="datetime" id="datetime" creadonly class="form-control" placeholder="filled by db">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="inspectedby">Inspected By</label>
+                            <input type="text" name="inspectedby" id="inspectedby" creadonly class="form-control" placeholder="filled by db">
+                        </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group col-sm-4">
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                            <label class="radio-inline control-label mr-2 mt-2">Headlight</label>
+                                            <label class="btn border" for="NA">N/A
+                                                <input type="radio" class="btn-check" name="NA" id="NA" autocomplete="off" checked/>
+                                            </label>
+                                          
+                                            <label class="btn border" for="good"><i class="fa fa-check"></i>
+                                                <input type="radio" class="btn-check" name="good" id="good" autocomplete="off" />
+                                            </label>
+                                          
+                                            <label class="btn border" for="Issue">Issue
+                                                <input type="radio" class="btn-check" name="Issue" id="Issue" autocomplete="off" />
+
+                                            </label>
+                                          </div>
+                                          <input type="text" class="form-control" id="head-issue" name="head-issue" id="Issue" />
+
+                                    
+                            
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-6"></div>
+                            </div>
+
+                    </div> <!-- container -->
+                </form>
+
+        
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+  </body>
+</html>
