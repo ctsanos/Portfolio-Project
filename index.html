@@ -8,91 +8,744 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 
     <title>Hello, world!</title>
   </head>
   <body>
 
     <div class="container">
-
         <div class="row">
-            <div class="col border-bottom">
-                <h1 class="text-center">VEHICLE CHECK-IN/OUT</h1>
-            </div>
+            <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+                <a class="navbar-brand" href="#">NROUTE</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                    </ul>
+                </div>
+            </nav>
+
         </div>
-                <form action="" id="checkInOut">
-                    <div  class="row border-bottom my-5">
-                        <div class="form-group col-sm-3">
-                            <label for="jobnum">Job #</label>
-                            <input type="text" name="jobnum" id="jobnum" readonly class="form-control-plaintext" placeholder="filled by db" value="filled by db">
-                        </div>
-                        <div class="form-group col-sm-3">
-                            <label for="">Agency:</label>
-                            <input type="text" name="agency" id="agency" readonly class="form-control-plaintext" placeholder="filled by db" value="filled by db">
-                        </div>
-                        <div class="form-group col-sm-3">
-                            <label for="makemod">Make/Model</label>
-                            <input type="text" name="makemod" id="makemod" readonly class="form-control-plaintext"  placeholder="filled by db" value="filled by db">
-                        </div>
-                        <div class="form-group col-sm-3">
-                            <label for="tech">Tech</label>
-                            <input type="text" name="tech" id="tech" creadonly class="form-control-plaintext"  placeholder="filled by db" value="filled by db">
-                        </div>
-                    </div>
+    </div>
 
-                    <div  class="row">
-                        <div class="form-group col-sm-4">
-                            <label for="vin">VIN</label>
-                            <input type="text" name="vin" id="vin" creadonly class="form-control" placeholder="filled by db">
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+           
+            <div class="row">
+                        <div class="col border-bottom card-title">
+                            <h1 class="text-center">VEHICLE CHECK-IN/OUT</h1>
                         </div>
-                        <div class="form-group col-sm-4">
-                            <label for="datetime">Date/Time</label>
-                            <input type="datetime-local" name="datetime" id="datetime" creadonly class="form-control" placeholder="filled by db">
-                        </div>
-                        <div class="form-group col-sm-4">
-                            <label for="inspectedby">Inspected By</label>
-                            <input type="text" name="inspectedby" id="inspectedby" creadonly class="form-control" placeholder="filled by db">
-                        </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group col-sm-4">
-                                        <div class="btn-group` btn-group-toggle" data-toggle="buttons">
-                                            <label class="radio-inline control-label mr-2 mt-2">Headlight</label>
-                                            <label class="btn border" for="NA">N/A
-                                                <input type="radio" class="btn-check" name="NA" id="NA" autocomplete="off" checked/>
-                                            </label>
-                                          
-                                            <label class="btn border" for="good"><i class="fa fa-check"></i>
-                                                <input type="radio" class="btn-check" name="good" id="good" autocomplete="off" />
-                                            </label>
-                                          
-                                            <label class="btn border" for="Issue">Issue
-                                                <input type="radio" class="btn-check" name="Issue" id="Issue" autocomplete="off" />
+            </div>
 
-                                            </label>
-                                          </div>
-                                          <input type="text" class="form-control" id="head-issue" name="head-issue" id="Issue" />
+            <form action="" id="checkInOut">
+                <div class="row border-bottom my-5">
+                            <div class="form-group col-sm-3">
+                                <label for="jobnum">Job #</label>
+                                <input type="text" name="jobnum" id="jobnum" readonly class="form-control-plaintext" placeholder="filled by db" value="filled by db">
+                            </div>
+                            <div class="form-group col-sm-3">
+                                <label for="">Agency:</label>
+                                <input type="text" name="agency" id="agency" readonly class="form-control-plaintext" placeholder="filled by db" value="filled by db">
+                            </div>
+                            <div class="form-group col-sm-3">
+                                <label for="makemod">Make/Model</label>
+                                <input type="text" name="makemod" id="makemod" readonly class="form-control-plaintext"  placeholder="filled by db" value="filled by db">
+                            </div>
+                            <div class="form-group col-sm-3">
+                                <label for="tech">Tech</label>
+                                <input type="text" name="tech" id="tech" creadonly class="form-control-plaintext"  placeholder="filled by db" value="filled by db">
+                            </div>
+                </div>
 
-                                    
+                <div class="row">
+                            <div class="form-group col-sm-4">
+                                <label for="vin">VIN</label>
+                                <input type="text" name="vin" id="vin" creadonly class="form-control">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="datetime">Date/Time</label>
+                                <input type="datetime-local" name="datetime" id="datetime" creadonly class="form-control">
+                            </div>
                             
+                            <div class="form-group col-sm-4">
+                                <label for="inspectedby">Inspected By</label>
+                                <input type="text" name="inspectedby" id="inspectedby" creadonly class="form-control">
+                            </div>
+                </div>
+
+                    <div class="row mt-5">
+                        <div class="col-sm-6 px-1 px-sm-auto">
+                            <h5 class="border-bottom mb-3">Lighting</h5>
+                            <div class="row pb-1 align-items-center">
+                                <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                    <div class="btn-group-prepend col-4 col-xs-3">
+                                        <span class="btn-group-text">Headlight </span>
                                     </div>
 
+                                        <label class="btn  na active col-1">
+                                        <input type="radio" name="headlight" id="headlightna" value="headlightna" autocomplete="off" checked> <i class="fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1">
+                                        <input type="radio" name="headlight" id="headlightgood" value="headlightgood" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="headlight" id="headlightproblem" value="headlightproblem" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+                                   
+                                    </div>
                                 </div>
-                                <div class="col-sm-6"></div>
-                            </div>
 
-                    </div> <!-- container -->
-                </form>
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
 
-        
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">Taillight </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="taillight" id="taillightna" value="taillightna" autocomplete="off" checked> <i class="fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1">
+                                        <input type="radio" name="taillight" id="taillightgood" value="taillightgood" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="taillight" id="taillightproblem" value="taillightproblem" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">Turn Signal </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="turn" id="turnna" value="turnna" autocomplete="off" checked> <i class="fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1">
+                                        <input type="radio" name="turn" id="turng" value="turng" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="turn" id="turnp" value="turnp" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">hazard </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="hazard" id="hazardna" value="hazardna" autocomplete="off" checked> <i class="fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1">
+                                        <input type="radio" name="hazard" id="hazardg" value="hazardg" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="hazard" id="hazardp" value="hazardp" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">reverse </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="reverse" id="reversena" value="reversena" autocomplete="off" checked> <i class="fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1">
+                                        <input type="radio" name="reverse" id="reverseg" value="reverseg" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="reverse" id="reversep" value="reversep" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">brake </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="brake" id="brakena" value="brakena" autocomplete="off" checked> <i class="fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1">
+                                        <input type="radio" name="brake" id="brakeg" value="brakeg" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="brake" id="brakep" value="brakep" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">horn </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="horn" id="hornna" value="hornna" autocomplete="off" checked> <i class="fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1">
+                                        <input type="radio" name="horn" id="horng" value="horng" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="horn" id="hornp" value="hornp" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">dome </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="dome" id="domena" value="domena" autocomplete="off" checked> <i class="fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1">
+                                        <input type="radio" name="dome" id="domeg" value="domeg" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="dome" id="domep" value="domep" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">interior </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="interior" id="interiorna" value="interiorna" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="interior" id="interiorg" value="interiorg" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="interior" id="interiorp" value="interiorp" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <h5 class="border-bottom pt-5 mb-3">Climate</h5>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">A/C </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="ac" id="ac-na" value="ac-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="ac" id="ac-g" value="ac-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="ac" id="ac-p" value="ac-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">heat </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="heat" id="heat-na" value="heat-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="heat" id="heat-g" value="heat-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="heat" id="heat-p" value="heat-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+
+                                <h5 class="border-bottom pt-5 mb-3">Warning Lights</h5>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">engine </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="engine" id="enginen-a" value="enginen-a" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="engine" id="engine-g" value="engine-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="engine" id="engine-p" value="engine-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">air bags </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="airbags" id="airbags-na" value="airbags-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="airbags" id="airbags-g" value="airbags-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="airbags" id="airbags-p" value="airbags-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+                            </div> <!-- col-sm-6 px-1 px-sm-auto -->
+
+                            <div class="col-sm-6 px-1 px-sm-auto">  
+
+                                <h5 class="border-bottom mb-3">Switch Control</h5>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">lock/Unlock </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="lockunlock" id="lockunlock-na" value="lockunlock-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="lockunlock" id="lockunlock-g" value="lockunlock-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="lockunlock" id="lockunlock-p" value="lockunlock-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">mirror </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="mirror" id="mirror-na" value="mirror-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="mirror" id="mirror-g" value="mirror-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="mirror" id="mirror-p" value="mirror-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">window up/dn/lock </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="window" id="window-na" value="window-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="window" id="window-g" value="window-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="window" id="window-p" value="window-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">trunk/Tail </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="trunktail" id="trunktail-na" value="trunktail-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="trunktail" id="trunktail-g" value="trunktail-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="trunktail" id="trunktail-p" value="trunktail-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">warning lights </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="warninglight" id="warninglight-na" value="warninglight-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="warninglight" id="warninglight-g" value="warninglight-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="warninglight" id="warninglight-p" value="warninglight-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <h5 class="border-bottom mb-3 pt-4">Body Damage</h5>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">grille </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="grille" id="grille-na" value="grille-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="grille" id="grille-g" value="grille-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="grille" id="grille-p" ad="grille-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">hood </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="hood" id="hood-na" value="hood-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="hood" id="hood-g" value="hood-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="hood" id="hood-p" value="hood-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">driver side </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="driverside" id="driverside-na"  value="driverside-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="driverside" id="driverside-g"  value="driverside-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="driverside" id="driverside-p"  value="driverside-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">passenger side </span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="passengerside" id="driverside-na" value="driverside-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="passengerside" id="passengerside-g" value="passengerside-g"autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="passengerside" id="passengerside-p" value="passengerside-p"autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">trunk</span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="trunk" id="trunk-na" value="trunk-g" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="trunk" id="trunk-g" value="trunk-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="trunk" id="trunk-p" value="trunk-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">rear</span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="rear" id="rear-na" value="rear-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="rear" id="rear-g" value="rear-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="rear" id="rear-p" value="rear-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">tires</span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="tires" id="tires-na" value="tires-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="tires" id="tires-g" value="tires-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="tires" id="tires-p" value="tires-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">roof</span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="roof" id="roof-na" value="roof-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="roof" id="roof-g" value="roof-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="roof" id="roof-p" value="roof-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+
+                                <div class="row pb-1 align-items-center">
+                                    <div class="btn-group btn-group-toggle col px-1 px-sm-auto" aria-label="Radio" data-toggle="buttons">
+
+                                        <div class="btn-group-prepend col-4 col-xs-3">
+                                            <span class="btn-group-text">radio</span>
+                                        </div>
+
+                                        <label class="btn na active col-1">
+                                        <input type="radio" name="radio" id="radio-na" value="radio-na" autocomplete="off" checked> <i class=" fa fa-minus-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn good col-1 ">
+                                        <input type="radio" name="radio" id="radio-g" value="radio-g" autocomplete="off">  <i class="fa fa-check-square"></i>
+                                        </label>
+                                    
+                                        <label class="btn problem col-1">
+                                        <input type="radio" name="radio" id="radio-p" value="radio-p" autocomplete="off"><i class="fa fa-exclamation-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" aria-label="Text input with radio button">
+
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div> <!-- col-sm-6 px-1 px-sm-auto -->
 
 
 
 
 
 
+                    </div> <!-- row with two col-sm-6 px-1 px-sm-auto -->
+                    <div class="row justify-content-end">
+                        <div class="col-1">
+                            <input type="submit" value="Submit" class="btn btn-primary">
+                        </div>
+                    </div>
+            </form>
+            </div>
+            </div>
+        </div>  <!-- container -->
 
-    </div>
 
 
 
@@ -103,6 +756,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="/js/scripts.js"></script>
 
   </body>
 </html>

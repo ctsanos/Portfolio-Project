@@ -1,0 +1,12 @@
+
+
+i:before {
+    font-size: 22px;
+}
+.btn-group-toggle .btn{padding:0;}
+
+.btn:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle{ color:#007bff;}
+.btn:not(:disabled):not(.disabled){color:#d4d4d4;}
+.btn:not(:disabled):not(.disabled).active.problem, .btn:not(:disabled):not(.disabled):active.problem{color: #dc3545;}
+.btn:not(:disabled):not(.disabled).active.good, .btn:not(:disabled):not(.disabled):active.good{color: #28a745;}
+label, .btn-group-text{font-weight:600; text-transform: capitalize; font-size:.9rem;}
