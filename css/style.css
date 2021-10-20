@@ -10,3 +10,4 @@ i:before {
 .btn:not(:disabled):not(.disabled).active.problem, .btn:not(:disabled):not(.disabled):active.problem{color: #dc3545;}
 .btn:not(:disabled):not(.disabled).active.good, .btn:not(:disabled):not(.disabled):active.good{color: #28a745;}
 label, .btn-group-text{font-weight:600; text-transform: capitalize; font-size:.9rem;}
+
