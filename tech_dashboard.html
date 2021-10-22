@@ -105,7 +105,7 @@
         <div class="tab-pane fade show active" id="check-in" role="tabpanel" aria-labelledby="check-in-tab">
 
           <div class="table-responsive">
-          <table class="table table-hover" id="checkInView">
+          <table class="table table-hover  text-center" id="checkInView">
             <thead>
               <tr class="table-dark text-center"><th colspan="9">Vehicles for Check In</th></tr>
               <tr>
@@ -160,7 +160,7 @@
         <div class="tab-pane fade" id="check-out" role="tabpanel" aria-labelledby="check-out-tab">
           
           <div class="table-responsive">
-          <table class="table table-hover" id="checkOutView">
+          <table class="table table-hover  text-center" id="checkOutView">
             <thead>
               <tr class="table-dark text-center"><th colspan="9">Vehicles for Check Out</th></tr>
               <tr>
@@ -170,7 +170,8 @@
                 <th scope="col">Date Assn.</th>
                 <th scope="col">Date Due</th>
                 <th scope="col">Inventory</th>
-                <th scope="col">Complete Check Out</th>
+                <th scope="col">Upload Images</th>
+                <th scope="col">Mgr. Sign Off</th>
               </tr>
             </thead>
             <tbody>
@@ -181,6 +182,7 @@
                 <td>&hellip;</td>
                 <td>&hellip;</td>
                 <td><a href="#" >Link</a></td>
+                <td><a href="#" ><span class="fa fa-upload" title="Upload" alt="Upload"></span></a></td>
                 <td><a href="#" >Check Out</a></td>
               </tr>
               <tr>
@@ -190,6 +192,7 @@
                 <td>&hellip;</td>
                 <td>&hellip;</td>
                 <td><a href="#" >Link</a></td>
+                <td><a href="#" ><span class="fa fa-upload" title="Upload" alt="Upload"></span></a></td>
                 <td><a href="#" >Check Out</a></td>
               </tr>
               <tr>
@@ -198,9 +201,9 @@
                 <td>&hellip;</td>
                 <td>&hellip;</td>
                 <td>&hellip;</td>
-
                 <td><a href="#" >Link</a></td>
-                <td><a href="#" >Check Out</a></td>
+                <td><a href="#" ><span class="fa fa-upload" title="Upload" alt="Upload"></span></a></td>
+                <td><a href="#" >Link</a></td>
               </tr>
             </tbody>
           </table>
@@ -219,15 +222,6 @@
 
 
 
-<script>
-  function carDetails(carInfo) {
-    $('#titleMod').html('');
-    var carMake = carInfo.getAttribute("data-makeMod");
-    var carID = carInfo.getAttribute("data-idNum");
-    return $('#titleMod').append("Specs for: <br>" + carID + ": " + carMake + ".");
-  }
-  </script>
-  
 
   </body>
 </html>
