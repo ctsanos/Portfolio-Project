@@ -2,6 +2,9 @@ $color-secondary: #6c757d;
 $color-lightgrey: #d4d4d4;
 $body-font: "Open Sans", Helvetica, sans-serif;
 $header-font: "Raleway", Arial, sans-serif;
+$color-gradient-primary: linear-gradient(to bottom, #415e98 0%, #35507c 100%);
+$color-gradient-secondary: linear-gradient(to bottom, #ee463d 0%, #992822 100%);
+
 
 body {
     font-family: $body-font
@@ -17,23 +20,31 @@ i:before {
 .btn-group-toggle .btn{padding:0;}
 
 .btn:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle{ color:#007bff;}
-.btn:not(:disabled):not(.disabled){color:$color-lightgrey;}
+.lt_btns .btn:not(:disabled):not(.disabled){color:$color-lightgrey;}
 .btn:not(:disabled):not(.disabled).active.problem, .btn:not(:disabled):not(.disabled):active.problem{color: #dc3545;}
 .btn:not(:disabled):not(.disabled).active.good, .btn:not(:disabled):not(.disabled):active.good{color: #28a745;}
 label, .btn-group-text{font-weight:600; text-transform: capitalize; font-size:.9rem;}
 
+
+.lt_btns .btn:not(:disabled):not(.disabled).active, .lt_btns .btn:not(:disabled):not(.disabled):active, .lt_btns .show > .btn-light.dropdown-toggle {
+    color: #007bff;
+}
+.text-white .btn:not(:disabled):not(.disabled){color:#FFFFFF;}
+
 .nav-link {
     display: block;
     padding: .5rem 1rem;
-    background: $color-secondary;
-    margin: 0 20px;
-    color: #FFFFFF;
-    transition:100ms;
+    background: #FFFFFF;
+    margin: 0 10px;
+    color: #6c757d;
+    transition: 100ms;
     border-radius: 5px;
+    border: 1px solid #6c757d;
 }
 
-.nav-link:hover{background-color:$color-lightgrey; color:$color-secondary;}
-h1.page-title{font-size:2rem; font-weight:300; padding:10px; text-transform:uppercase;}
+
+.nav-link:hover, .nav-link.active{background-color:$color-lightgrey; color:$color-secondary;}
+h1.page-title{font-size:1.6rem; padding:10px;}
 label{padding-right:10px; font-weight:600;}
 form .row, .form-row{margin-bottom:10px;}
 
@@ -62,3 +73,24 @@ form .row, .form-row{margin-bottom:10px;}
     
 }
 
+.bg-gradient-primary, .btn-gradient-primary{
+    background: $color-gradient-primary !important;
+    color:#FFFFFF;
+}
+
+.bg-gradient-secondary, .btn-gradient-secondary{
+    background: $color-gradient-secondary !important;
+    color:#FFFFFF;
+}
+
+
+@media (max-width:991px){
+
+    .navbar{
+        // justify-content: start;
+        padding: .5rem 0rem;}
+
+        .nav-link{
+            margin: 0 2px;
+        }
+}
