@@ -20,12 +20,7 @@ $(function(){
         
     });
 
-    function carDetails(carInfo) {
-        $('#titleMod').html('');
-        var carMake = carInfo.getAttribute("data-makeMod");
-        var carID = carInfo.getAttribute("data-idNum");
-        return $('#titleMod').append("Specs for: <br>" + carID + ": " + carMake + ".");
-      }
+
 
 });
 
